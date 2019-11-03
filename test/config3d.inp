@@ -1,0 +1,30 @@
+# Organization of phase diagram
+#
+#               1
+#              / \
+#             /   \
+#            /     \
+#           /       \
+#          2---------3
+
+# Specify dimension of components
+dim   3
+
+# Do NOT change the order of x's or n's.
+# Only modify the corresponding number!
+
+# Flory-Huggins Chi-parameter
+x12   0.529
+x13   0.444
+x23   0.000
+
+# Relative molar volume
+n11   1
+n21   1000
+n31   1000
+
+# Resolution
+gridsize 0.001
+
+# Prefix for output files
+outpref test3d
