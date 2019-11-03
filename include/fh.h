@@ -10,14 +10,6 @@ struct Coor2D {
     Coor2D (double x, double y):x(x), y(y) {}
 };
 
-// struct Coor3D {
-//     double x;
-//     double y;
-//     double z;
-//     Coor3D () {}
-//     Coor3D (double x, double y, double z):x(x), y(y), z(z) {}
-// };
-
 struct Comp3D {
     double x;
     double y;
@@ -35,25 +27,8 @@ struct Comp3D {
     }
 };
 
-
-// struct Comp4D {
-//     double x;
-//     double y;
-//     double z;
-//     double w;
-//     Comp4D () {}
-//     Comp4D (double x, double y, double z, double w):x(x), y(y), z(z), w(w) {}
-// };
-
-Coor2D comp2coor2d(const Comp3D& comp3d); // convert 3D composition to 2D coordinate
-// Coor3D comp2coor3d(const Comp4D& comp4d); // convert 4D composition to 3D coordinate
-
-/*********************
-          0    1    2
-phiVec phiA phiB phiC
-volVec   nA   nB   nC
-chiVec   AB   BC   AC   
-*********************/
+// convert 3D composition to 2D coordinate
+Coor2D comp2coor2d(const Comp3D& comp3d);
 
 REAL freeEnergyFH(const REALVEC& phiVec, const REALVEC& volVec, const REALVEC& chiVec);
 // REAL freeEnergyOA(const REALVEC& targVec, const REALVEC& phiVec, const REALVEC& chiVec, const REALVEC& volVec);
@@ -65,7 +40,5 @@ void init_pd(unsigned short int ncomp, double gridsize);
 void calc_pd(const REALVEC& volVec, const REALVEC& chiVec, REAL gridsize);
 
 void write_pd(const STR& out_name);
-
-// bool is_stable()
 
 #endif

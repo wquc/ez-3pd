@@ -5,13 +5,13 @@ Evaluate phase diagram of ternary blend numerically[1] as shown in the example b
 
 <img src="test/test3d.png" width="50%"/>
 
-Notes:
+**Notes:**
 
 [1] Since each component is independent with regard to each other, the program is trivially parallelized with OpenMP.
 
 [2] The [python-ternary](https://github.com/marcharper/python-ternary) library is needed to plot the phase diagram. An example can be found in `test/plot-test3d.py`.
 
-Reference:
+**Reference:**
 
 [1] Horst, Roland. "Calculation of phase diagrams not requiring the derivatives of the Gibbs energy demonstrated for a mixture of two homopolymers with the corresponding copolymer." Macromolecular theory and simulations 4.3 (1995): 449-458.
 

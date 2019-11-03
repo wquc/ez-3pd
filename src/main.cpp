@@ -17,6 +17,7 @@ int main(int argc, char* argv[]) {
         std::cerr << "ERROR> Missing input file!" << std::endl;
         return EXIT_FAILURE;
     }
+    
     /* 1. read input */
     STR inp_name = argv[1];
     Config config;
@@ -27,10 +28,8 @@ int main(int argc, char* argv[]) {
     /* 2. Compute phase diagram */
     init_pd(config.ncomp, config.gridsize);
     calc_pd(config.chiVec, config.volVec, config.gridsize);
+    
     /* 3. write output */
-    // std::string out_name = config.job_name + std::string("_nma_data_cutoff") + 
-    //                        real2str(config.r_cutoff) + std::string(".dat");
-    // write_data(out_name, config.n_modes, config.tol);
     write_pd(config.outpref);
     std::cout << "EZNPD> Normal termination of the program." << std::endl;
     return EXIT_SUCCESS;
