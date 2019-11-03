@@ -21,4 +21,4 @@ Evaluate phase diagram of ternary blend numerically[1] as shown in the example b
 
 TODO:
 
-[ ] Calculate and visualize tie lines.
+- [ ] Calculate and visualize tie lines.
