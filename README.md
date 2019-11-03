@@ -7,9 +7,9 @@ Evaluate phase diagram of ternary blend numerically[1] as shown in the example b
 
 **Notes:**
 
-[1] Since each component is independent with regard to each other, the program is trivially parallelized with OpenMP.
+- Since each component is independent with regard to each other, the program is trivially parallelized with OpenMP.
 
-[2] The [python-ternary](https://github.com/marcharper/python-ternary) library is needed to plot the phase diagram. An example can be found in `test/plot-test3d.py`.
+- The [python-ternary](https://github.com/marcharper/python-ternary) library is needed to plot the phase diagram. An example can be found in `test/plot-test3d.py`.
 
 **Reference:**
 
