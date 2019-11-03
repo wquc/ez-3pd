@@ -9,7 +9,6 @@
 #include <cmath>
 #include "../include/define.h"
 #include "../include/fh.h"
-#include "../include/util.h"
 
 static std::vector<Comp3D> composition3d;
 static std::vector<bool>   is_unstable;
@@ -23,14 +22,9 @@ REAL freeEnergyFH(const REALVEC& phiVec, const REALVEC& chiVec, const REALVEC& v
     REAL entropyFH  = phiVec[0]*log(phiVec[0])/volVec[0] + 
                       phiVec[1]*log(phiVec[1])/volVec[1] +
                       phiVec[2]*log(phiVec[2])/volVec[2];
-
     REAL enthalpyFH = phiVec[0]*phiVec[1]*chiVec[0] + 
-                      //   phi1 phi2      x12
                       phiVec[1]*phiVec[2]*chiVec[2] + 
-                      //   phi2 phi3      x23
                       phiVec[0]*phiVec[2]*chiVec[1];
-                      //   phi1 phi3      x13
-
     return entropyFH + enthalpyFH;
 }
 

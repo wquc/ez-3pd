@@ -3,10 +3,10 @@
 #include <string>
 #include <algorithm>
 #include <sstream>
+#include "../include/define.h"
 #include "../include/config.h"
-#include "../include/util.h"
 
-bool read_config(const std::string& inp_name, Config& config) {
+bool read_config(const STR& inp_name, Config& config) {
     std::ifstream inp_file(inp_name);
     /* check if input file exists. */
     if(!inp_file.is_open()) {
@@ -21,9 +21,8 @@ bool read_config(const std::string& inp_name, Config& config) {
                   << std::endl;
     }
     /* now read configuration */
-    std::string each_line;
+    STR each_line, buff;
     std::stringstream each_stream;
-    std::string buff;
     double each_chi, each_vol;
     auto is_space = [](char c) {return std::isspace(c);};
     while(getline(inp_file, each_line)) {
